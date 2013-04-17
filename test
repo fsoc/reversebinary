@@ -1,0 +1,44 @@
+#!/bin/bash
+
+
+function lol {
+    c=$(echo $a|./reversebinary)
+    
+    if [ $c != $b ];
+    then
+        echo "";
+        echo "fail"; 
+        echo "obase=2; ibase=10; $a" |bc
+        echo "obase=2; ibase=10; $c" |bc
+    fi
+
+}
+
+a="6"
+b="3"
+lol
+
+a="13"
+b="11"
+lol
+
+
+a="47"
+b="61"
+lol
+
+a="1"
+b="1"
+lol
+
+a="1000000000"
+b="1365623"
+lol
+
+a="805306368"
+b="3"
+lol
+
+a="3"
+b="3"
+lol
